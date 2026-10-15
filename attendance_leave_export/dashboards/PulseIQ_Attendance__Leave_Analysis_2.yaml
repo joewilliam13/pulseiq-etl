@@ -1,0 +1,325 @@
+dashboard_title: "PulseIQ \u2013 Attendance & Leave Analysis"
+description: null
+css: ''
+slug: null
+certified_by: ''
+certification_details: ''
+published: false
+uuid: 8a422a62-81ae-49e7-904f-e7d9e5e734b6
+position:
+  CHART-explore-10-1:
+    children: []
+    id: CHART-explore-10-1
+    meta:
+      chartId: 10
+      height: 50
+      sliceName: Department-wise Attendance
+      uuid: 62962d66-7d96-404f-a3f3-515d83bd4c11
+      width: 4
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-cFvhUxcj8lnDIr-WlFiKu
+    type: CHART
+  CHART-explore-11-1:
+    children: []
+    id: CHART-explore-11-1
+    meta:
+      chartId: 11
+      height: 50
+      sliceName: Approved Leave Days by Type
+      uuid: b41590f0-9f42-4122-aa11-26261fab5ea2
+      width: 4
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-cFvhUxcj8lnDIr-WlFiKu
+    type: CHART
+  CHART-explore-12-1:
+    children: []
+    id: CHART-explore-12-1
+    meta:
+      chartId: 12
+      height: 50
+      sliceName: Monthly Late Arrivals
+      uuid: a1f5ee4b-6bd2-48d7-855a-fcae73dcebb3
+      width: 4
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-t6LYj6b0aazwYi08dG0th
+    type: CHART
+  CHART-explore-13-1:
+    children: []
+    id: CHART-explore-13-1
+    meta:
+      chartId: 13
+      height: 50
+      sliceName: Leave Requests by Status
+      uuid: a93a49c0-e1c9-43eb-9e5c-8eab20b384b9
+      width: 4
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-t6LYj6b0aazwYi08dG0th
+    type: CHART
+  CHART-explore-14-1:
+    children: []
+    id: CHART-explore-14-1
+    meta:
+      chartId: 14
+      height: 50
+      sliceName: Attendance Rate vs Late Arrivals
+      uuid: 99ec6969-1f49-49b4-acd5-22454fdcd691
+      width: 4
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-t6LYj6b0aazwYi08dG0th
+    type: CHART
+  CHART-explore-15-1:
+    children: []
+    id: CHART-explore-15-1
+    meta:
+      chartId: 15
+      height: 50
+      sliceName: Weekday Attendance Analysis
+      uuid: 15d3b07f-8e55-4c4b-99c2-c47bb97022f4
+      width: 4
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-kPedrj6awwDoYixeIhf7G
+    type: CHART
+  CHART-explore-16-1:
+    children: []
+    id: CHART-explore-16-1
+    meta:
+      chartId: 16
+      height: 50
+      sliceName: AI Anomaly Analysis
+      uuid: 4abc060a-f317-46f4-8224-41132c5fd588
+      width: 4
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-kPedrj6awwDoYixeIhf7G
+    type: CHART
+  CHART-explore-9-1:
+    children: []
+    id: CHART-explore-9-1
+    meta:
+      chartId: 9
+      height: 50
+      sliceName: Monthly Attendance Trend
+      uuid: a25b211f-410a-4b65-83f5-74b0dcf0864f
+      width: 4
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-cFvhUxcj8lnDIr-WlFiKu
+    type: CHART
+  DASHBOARD_VERSION_KEY: v2
+  GRID_ID:
+    children:
+    - ROW-cFvhUxcj8lnDIr-WlFiKu
+    - ROW-t6LYj6b0aazwYi08dG0th
+    - ROW-kPedrj6awwDoYixeIhf7G
+    id: GRID_ID
+    parents:
+    - ROOT_ID
+    type: GRID
+  HEADER_ID:
+    id: HEADER_ID
+    meta:
+      text: "PulseIQ \u2013 Attendance & Leave Analysis"
+    type: HEADER
+  MARKDOWN-l1OPx37v4Ws9HbBc8lEb-:
+    children: []
+    id: MARKDOWN-l1OPx37v4Ws9HbBc8lEb-
+    meta:
+      code: "## Key Business Insights\r\n\r\n- **Attendance Trend:** September 2026\
+        \ attendance rate was 95.00%, compared with 92.64% in May 2026.\r\n- **Department\
+        \ Analysis:** D08 recorded the lowest attendance rate at 90.60% in the available\
+        \ monthly data.\r\n- **Late Arrivals:** September 2026 recorded 618 late arrivals.\r\
+        \n- **Leave Analysis:** Earned Leave had 2,336 approved leave days, while\
+        \ Casual Leave had 1,995.\r\n- **AI Anomaly Analysis:** The sample model flagged\
+        \ 221 attendance-related records and 184 payroll-related records.\r\n\r\n\
+        **Limitation:** Daily weekday analysis uses a sample of 2,000 records, not\
+        \ the complete company attendance history. Model-flagged records require validation\
+        \ before being treated as confirmed anomalies."
+      height: 50
+      width: 4
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-kPedrj6awwDoYixeIhf7G
+    type: MARKDOWN
+  ROOT_ID:
+    children:
+    - GRID_ID
+    id: ROOT_ID
+    type: ROOT
+  ROW-cFvhUxcj8lnDIr-WlFiKu:
+    children:
+    - CHART-explore-9-1
+    - CHART-explore-10-1
+    - CHART-explore-11-1
+    id: ROW-cFvhUxcj8lnDIr-WlFiKu
+    meta:
+      '0': ROOT_ID
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    type: ROW
+  ROW-kPedrj6awwDoYixeIhf7G:
+    children:
+    - CHART-explore-15-1
+    - CHART-explore-16-1
+    - MARKDOWN-l1OPx37v4Ws9HbBc8lEb-
+    id: ROW-kPedrj6awwDoYixeIhf7G
+    meta:
+      '0': ROOT_ID
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    type: ROW
+  ROW-t6LYj6b0aazwYi08dG0th:
+    children:
+    - CHART-explore-12-1
+    - CHART-explore-13-1
+    - CHART-explore-14-1
+    id: ROW-t6LYj6b0aazwYi08dG0th
+    meta:
+      '0': ROOT_ID
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    type: ROW
+metadata:
+  chart_configuration:
+    '9':
+      id: 9
+      crossFilters:
+        scope: global
+        chartsInScope:
+        - 10
+        - 11
+        - 12
+        - 13
+        - 14
+        - 15
+        - 16
+    '10':
+      id: 10
+      crossFilters:
+        scope: global
+        chartsInScope:
+        - 9
+        - 11
+        - 12
+        - 13
+        - 14
+        - 15
+        - 16
+    '11':
+      id: 11
+      crossFilters:
+        scope: global
+        chartsInScope:
+        - 9
+        - 10
+        - 12
+        - 13
+        - 14
+        - 15
+        - 16
+    '12':
+      id: 12
+      crossFilters:
+        scope: global
+        chartsInScope:
+        - 9
+        - 10
+        - 11
+        - 13
+        - 14
+        - 15
+        - 16
+    '13':
+      id: 13
+      crossFilters:
+        scope: global
+        chartsInScope:
+        - 9
+        - 10
+        - 11
+        - 12
+        - 14
+        - 15
+        - 16
+    '14':
+      id: 14
+      crossFilters:
+        scope: global
+        chartsInScope:
+        - 9
+        - 10
+        - 11
+        - 12
+        - 13
+        - 15
+        - 16
+    '15':
+      id: 15
+      crossFilters:
+        scope: global
+        chartsInScope:
+        - 9
+        - 10
+        - 11
+        - 12
+        - 13
+        - 14
+        - 16
+    '16':
+      id: 16
+      crossFilters:
+        scope: global
+        chartsInScope:
+        - 9
+        - 10
+        - 11
+        - 12
+        - 13
+        - 14
+        - 15
+  global_chart_configuration:
+    scope:
+      rootPath:
+      - ROOT_ID
+      excluded: []
+    chartsInScope:
+    - 9
+    - 10
+    - 11
+    - 12
+    - 13
+    - 14
+    - 15
+    - 16
+  map_label_colors: {}
+  color_scheme: ''
+  refresh_frequency: 0
+  color_scheme_domain: []
+  expanded_slices: {}
+  label_colors: {}
+  shared_label_colors: []
+  timed_refresh_immune_slices: []
+  cross_filters_enabled: true
+  default_filters: '{}'
+theme_uuid: null
+version: 1.0.0

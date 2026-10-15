@@ -1,0 +1,80 @@
+slice_name: Department-wise Attendance
+description: null
+certified_by: null
+certification_details: null
+viz_type: echarts_timeseries_bar
+params:
+  datasource: 8__table
+  viz_type: echarts_timeseries_bar
+  x_axis: department_id
+  time_grain_sqla: P1D
+  x_axis_sort_asc: true
+  metrics:
+  - expressionType: SQL
+    sqlExpression: 100.0 * SUM(present_days) / NULLIF(SUM(scheduled_days), 0)
+    column: null
+    aggregate: null
+    datasourceWarning: false
+    hasCustomLabel: true
+    label: Attendence %
+    optionName: metric_agg22hvawzt_6o9oxsmavg
+  groupby: []
+  adhoc_filters:
+  - clause: WHERE
+    subject: period_end_date
+    operator: TEMPORAL_RANGE
+    comparator: No filter
+    expressionType: SIMPLE
+  order_desc: true
+  row_limit: 10000
+  truncate_metric: true
+  show_empty_columns: true
+  comparison_type: values
+  annotation_layers: []
+  forecastPeriods: 10
+  forecastInterval: 0.8
+  orientation: vertical
+  x_axis_title: Department
+  x_axis_title_margin: 30
+  y_axis_title: Attendence %
+  y_axis_title_margin: 30
+  y_axis_title_position: Left
+  sort_series_type: sum
+  sort_series_ascending: true
+  color_scheme: presetColors
+  time_shift_color: true
+  show_value: true
+  only_total: true
+  show_legend: true
+  legendType: scroll
+  legendOrientation: top
+  x_axis_time_format: smart_date
+  xAxisLabelInterval: auto
+  y_axis_format: SMART_NUMBER
+  truncateYAxis: true
+  y_axis_bounds:
+  - null
+  - null
+  truncateXAxis: true
+  rich_tooltip: true
+  showTooltipTotal: true
+  showTooltipPercentage: true
+  tooltipTimeFormat: smart_date
+  extra_form_data: {}
+  dashboards:
+  - 2
+query_context: '{"datasource":{"id":8,"type":"table"},"force":false,"queries":[{"filters":[{"col":"period_end_date","op":"TEMPORAL_RANGE","val":"No
+  filter"}],"extras":{"time_grain_sqla":"P1D","having":"","where":""},"applied_time_extras":{},"columns":[{"timeGrain":"P1D","columnType":"BASE_AXIS","sqlExpression":"department_id","label":"department_id","expressionType":"SQL","isColumnReference":true}],"metrics":[{"expressionType":"SQL","sqlExpression":"100.0
+  * SUM(present_days) / NULLIF(SUM(scheduled_days), 0)","column":null,"aggregate":null,"datasourceWarning":false,"hasCustomLabel":true,"label":"Attendence
+  %","optionName":"metric_agg22hvawzt_6o9oxsmavg"}],"orderby":[[{"expressionType":"SQL","sqlExpression":"100.0
+  * SUM(present_days) / NULLIF(SUM(scheduled_days), 0)","column":null,"aggregate":null,"datasourceWarning":false,"hasCustomLabel":true,"label":"Attendence
+  %","optionName":"metric_agg22hvawzt_6o9oxsmavg"},false]],"annotation_layers":[],"row_limit":10000,"series_columns":[],"series_limit":0,"group_others_when_limit_reached":false,"order_desc":true,"url_params":{},"custom_params":{},"custom_form_data":{},"time_offsets":[],"post_processing":[{"operation":"pivot","options":{"index":["department_id"],"columns":[],"aggregates":{"Attendence
+  %":{"operator":"mean"}},"drop_missing_columns":false}},{"operation":"flatten"}]}],"form_data":{"datasource":"8__table","viz_type":"echarts_timeseries_bar","x_axis":"department_id","time_grain_sqla":"P1D","x_axis_sort_asc":true,"metrics":[{"expressionType":"SQL","sqlExpression":"100.0
+  * SUM(present_days) / NULLIF(SUM(scheduled_days), 0)","column":null,"aggregate":null,"datasourceWarning":false,"hasCustomLabel":true,"label":"Attendence
+  %","optionName":"metric_agg22hvawzt_6o9oxsmavg"}],"groupby":[],"adhoc_filters":[{"clause":"WHERE","subject":"period_end_date","operator":"TEMPORAL_RANGE","comparator":"No
+  filter","expressionType":"SIMPLE"}],"order_desc":true,"row_limit":10000,"truncate_metric":true,"show_empty_columns":true,"comparison_type":"values","annotation_layers":[],"forecastPeriods":10,"forecastInterval":0.8,"orientation":"vertical","x_axis_title":"Department","x_axis_title_margin":30,"y_axis_title":"Attendence
+  %","y_axis_title_margin":30,"y_axis_title_position":"Left","sort_series_type":"sum","sort_series_ascending":true,"color_scheme":"presetColors","time_shift_color":true,"show_value":true,"only_total":true,"show_legend":true,"legendType":"scroll","legendOrientation":"top","x_axis_time_format":"smart_date","xAxisLabelInterval":"auto","y_axis_format":"SMART_NUMBER","truncateYAxis":true,"y_axis_bounds":[null,null],"truncateXAxis":true,"rich_tooltip":true,"showTooltipTotal":true,"showTooltipPercentage":true,"tooltipTimeFormat":"smart_date","extra_form_data":{},"dashboards":[2],"force":false,"result_format":"json","result_type":"full"},"result_format":"json","result_type":"full"}'
+cache_timeout: null
+uuid: 62962d66-7d96-404f-a3f3-515d83bd4c11
+version: 1.0.0
+dataset_uuid: 1898a854-f108-4c56-96e9-0615d32ead43

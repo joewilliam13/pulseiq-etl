@@ -1,0 +1,106 @@
+slice_name: Weekday Attendance Analysis
+description: null
+certified_by: null
+certification_details: null
+viz_type: echarts_timeseries_bar
+params:
+  datasource: 10__table
+  viz_type: echarts_timeseries_bar
+  x_axis: weekday
+  time_grain_sqla: P1D
+  x_axis_sort: COUNT_DISTINCT(employee_id)
+  x_axis_sort_asc: false
+  metrics:
+  - expressionType: SIMPLE
+    column:
+      advanced_data_type: null
+      certification_details: null
+      certified_by: null
+      column_name: employee_id
+      description: null
+      expression: null
+      filterable: true
+      groupby: true
+      id: 92
+      is_certified: false
+      is_dttm: false
+      python_date_format: null
+      type: column
+      type_generic: 1
+      uuid: 2b9396c7-58a3-4e91-8fcc-ac9495768ade
+      verbose_name: null
+      warning_markdown: null
+    aggregate: COUNT_DISTINCT
+    sqlExpression: null
+    datasourceWarning: false
+    hasCustomLabel: false
+    label: COUNT_DISTINCT(employee_id)
+    optionName: metric_sp71cb14wlr_t84ve97o03
+  groupby: []
+  adhoc_filters:
+  - expressionType: SIMPLE
+    subject: attendance_date
+    operator: TEMPORAL_RANGE
+    comparator: No filter
+    clause: WHERE
+    sqlExpression: null
+    isExtra: false
+    isNew: false
+    datasourceWarning: false
+    filterOptionName: filter_a2tfuxxjot6_7fo0kdjatg8
+  - expressionType: SIMPLE
+    subject: late_flag
+    operator: ==
+    operatorId: EQUALS
+    comparator: Y
+    clause: WHERE
+    sqlExpression: null
+    isExtra: false
+    isNew: false
+    datasourceWarning: false
+    filterOptionName: filter_hz6u7a2s9sr_y65jw5rd6xc
+  order_desc: true
+  row_limit: 10000
+  truncate_metric: true
+  show_empty_columns: true
+  comparison_type: values
+  annotation_layers: []
+  forecastPeriods: 10
+  forecastInterval: 0.8
+  orientation: vertical
+  x_axis_title: Weekday
+  x_axis_title_margin: 30
+  y_axis_title: Number of Late Arrivals
+  y_axis_title_margin: 30
+  y_axis_title_position: Left
+  sort_series_type: sum
+  sort_series_ascending: true
+  color_scheme: d3Category10
+  time_shift_color: true
+  show_value: true
+  only_total: true
+  show_legend: true
+  legendType: scroll
+  legendOrientation: top
+  x_axis_time_format: smart_date
+  xAxisLabelInterval: auto
+  y_axis_format: SMART_NUMBER
+  truncateYAxis: true
+  y_axis_bounds:
+  - null
+  - null
+  truncateXAxis: true
+  rich_tooltip: true
+  showTooltipTotal: true
+  tooltipTimeFormat: smart_date
+  extra_form_data: {}
+  dashboards:
+  - 2
+query_context: '{"datasource":{"id":10,"type":"table"},"force":false,"queries":[{"filters":[{"col":"attendance_date","op":"TEMPORAL_RANGE","val":"No
+  filter"},{"col":"late_flag","op":"==","val":"Y"}],"extras":{"time_grain_sqla":"P1D","having":"","where":""},"applied_time_extras":{},"columns":[{"timeGrain":"P1D","columnType":"BASE_AXIS","sqlExpression":"weekday","label":"weekday","expressionType":"SQL","isColumnReference":true}],"metrics":[{"expressionType":"SIMPLE","column":{"advanced_data_type":null,"certification_details":null,"certified_by":null,"column_name":"employee_id","description":null,"expression":null,"filterable":true,"groupby":true,"id":92,"is_certified":false,"is_dttm":false,"python_date_format":null,"type":"column","type_generic":1,"uuid":"2b9396c7-58a3-4e91-8fcc-ac9495768ade","verbose_name":null,"warning_markdown":null},"aggregate":"COUNT_DISTINCT","sqlExpression":null,"datasourceWarning":false,"hasCustomLabel":false,"label":"COUNT_DISTINCT(employee_id)","optionName":"metric_sp71cb14wlr_t84ve97o03"}],"orderby":[[{"expressionType":"SIMPLE","column":{"advanced_data_type":null,"certification_details":null,"certified_by":null,"column_name":"employee_id","description":null,"expression":null,"filterable":true,"groupby":true,"id":92,"is_certified":false,"is_dttm":false,"python_date_format":null,"type":"column","type_generic":1,"uuid":"2b9396c7-58a3-4e91-8fcc-ac9495768ade","verbose_name":null,"warning_markdown":null},"aggregate":"COUNT_DISTINCT","sqlExpression":null,"datasourceWarning":false,"hasCustomLabel":false,"label":"COUNT_DISTINCT(employee_id)","optionName":"metric_sp71cb14wlr_t84ve97o03"},false]],"annotation_layers":[],"row_limit":10000,"series_columns":[],"series_limit":0,"group_others_when_limit_reached":false,"order_desc":true,"url_params":{},"custom_params":{},"custom_form_data":{},"time_offsets":[],"post_processing":[{"operation":"pivot","options":{"index":["weekday"],"columns":[],"aggregates":{"COUNT_DISTINCT(employee_id)":{"operator":"mean"}},"drop_missing_columns":false}},{"operation":"sort","options":{"by":"COUNT_DISTINCT(employee_id)","ascending":false}},{"operation":"flatten"}]}],"form_data":{"datasource":"10__table","viz_type":"echarts_timeseries_bar","x_axis":"weekday","time_grain_sqla":"P1D","x_axis_sort":"COUNT_DISTINCT(employee_id)","x_axis_sort_asc":false,"metrics":[{"expressionType":"SIMPLE","column":{"advanced_data_type":null,"certification_details":null,"certified_by":null,"column_name":"employee_id","description":null,"expression":null,"filterable":true,"groupby":true,"id":92,"is_certified":false,"is_dttm":false,"python_date_format":null,"type":"column","type_generic":1,"uuid":"2b9396c7-58a3-4e91-8fcc-ac9495768ade","verbose_name":null,"warning_markdown":null},"aggregate":"COUNT_DISTINCT","sqlExpression":null,"datasourceWarning":false,"hasCustomLabel":false,"label":"COUNT_DISTINCT(employee_id)","optionName":"metric_sp71cb14wlr_t84ve97o03"}],"groupby":[],"adhoc_filters":[{"expressionType":"SIMPLE","subject":"attendance_date","operator":"TEMPORAL_RANGE","comparator":"No
+  filter","clause":"WHERE","sqlExpression":null,"isExtra":false,"isNew":false,"datasourceWarning":false,"filterOptionName":"filter_a2tfuxxjot6_7fo0kdjatg8"},{"expressionType":"SIMPLE","subject":"late_flag","operator":"==","operatorId":"EQUALS","comparator":"Y","clause":"WHERE","sqlExpression":null,"isExtra":false,"isNew":false,"datasourceWarning":false,"filterOptionName":"filter_hz6u7a2s9sr_y65jw5rd6xc"}],"order_desc":true,"row_limit":10000,"truncate_metric":true,"show_empty_columns":true,"comparison_type":"values","annotation_layers":[],"forecastPeriods":10,"forecastInterval":0.8,"orientation":"vertical","x_axis_title":"Weekday","x_axis_title_margin":30,"y_axis_title":"Number
+  of Late Arrivals","y_axis_title_margin":30,"y_axis_title_position":"Left","sort_series_type":"sum","sort_series_ascending":true,"color_scheme":"d3Category10","time_shift_color":true,"show_value":true,"only_total":true,"show_legend":true,"legendType":"scroll","legendOrientation":"top","x_axis_time_format":"smart_date","xAxisLabelInterval":"auto","y_axis_format":"SMART_NUMBER","truncateYAxis":true,"y_axis_bounds":[null,null],"truncateXAxis":true,"rich_tooltip":true,"showTooltipTotal":true,"tooltipTimeFormat":"smart_date","extra_form_data":{},"dashboards":[2],"force":false,"result_format":"json","result_type":"full"},"result_format":"json","result_type":"full"}'
+cache_timeout: null
+uuid: 15d3b07f-8e55-4c4b-99c2-c47bb97022f4
+version: 1.0.0
+dataset_uuid: b4c2e302-8a1e-4b2e-8552-801cbe4cfa41

@@ -1,0 +1,88 @@
+slice_name: Monthly Attendance Trend
+description: null
+certified_by: null
+certification_details: null
+viz_type: echarts_timeseries_line
+params:
+  datasource: 8__table
+  viz_type: echarts_timeseries_line
+  slice_id: 9
+  x_axis: period_end_date
+  time_grain_sqla: P1M
+  x_axis_sort_asc: true
+  metrics:
+  - aggregate: null
+    column: null
+    datasourceWarning: false
+    expressionType: SQL
+    hasCustomLabel: true
+    label: Attendance %
+    optionName: metric_jax8z5eubx9_4o1ssudcuzv
+    sqlExpression: 100.0 * SUM(present_days) / NULLIF(SUM(scheduled_days), 0)
+  groupby: []
+  adhoc_filters:
+  - clause: WHERE
+    comparator: No filter
+    expressionType: SIMPLE
+    operator: TEMPORAL_RANGE
+    subject: period_end_date
+  order_desc: true
+  row_limit: 10000
+  truncate_metric: true
+  show_empty_columns: true
+  comparison_type: values
+  annotation_layers: []
+  forecastPeriods: 10
+  forecastInterval: 0.8
+  x_axis_title: Month
+  x_axis_title_margin: 30
+  y_axis_title: Attendance Percentage (%)
+  y_axis_title_margin: 30
+  y_axis_title_position: Left
+  sort_series_type: sum
+  sort_series_ascending: true
+  color_scheme: supersetAndPresetColors
+  time_shift_color: true
+  show_value: false
+  only_total: true
+  area: true
+  opacity: 0.6
+  markerEnabled: true
+  markerSize: 6
+  minorTicks: false
+  show_legend: true
+  legendType: scroll
+  legendOrientation: top
+  x_axis_time_format: smart_date
+  xAxisLabelInterval: auto
+  rich_tooltip: true
+  showTooltipTotal: true
+  showTooltipPercentage: true
+  tooltipSortByMetric: false
+  tooltipTimeFormat: smart_date
+  y_axis_format: SMART_NUMBER
+  logAxis: false
+  minorSplitLine: false
+  truncateXAxis: true
+  truncateYAxis: true
+  y_axis_bounds:
+  - null
+  - null
+  extra_form_data: {}
+  dashboards:
+  - 2
+query_context: '{"datasource":{"id":8,"type":"table"},"force":false,"queries":[{"filters":[{"col":"period_end_date","op":"TEMPORAL_RANGE","val":"No
+  filter"}],"extras":{"time_grain_sqla":"P1M","having":"","where":""},"applied_time_extras":{},"columns":[{"timeGrain":"P1M","columnType":"BASE_AXIS","sqlExpression":"period_end_date","label":"period_end_date","expressionType":"SQL","isColumnReference":true}],"metrics":[{"aggregate":null,"column":null,"datasourceWarning":false,"expressionType":"SQL","hasCustomLabel":true,"label":"Attendance
+  %","optionName":"metric_jax8z5eubx9_4o1ssudcuzv","sqlExpression":"100.0 * SUM(present_days)
+  / NULLIF(SUM(scheduled_days), 0)"}],"orderby":[[{"aggregate":null,"column":null,"datasourceWarning":false,"expressionType":"SQL","hasCustomLabel":true,"label":"Attendance
+  %","optionName":"metric_jax8z5eubx9_4o1ssudcuzv","sqlExpression":"100.0 * SUM(present_days)
+  / NULLIF(SUM(scheduled_days), 0)"},false]],"annotation_layers":[],"row_limit":10000,"series_columns":[],"series_limit":0,"group_others_when_limit_reached":false,"order_desc":true,"url_params":{},"custom_params":{},"custom_form_data":{},"time_offsets":[],"post_processing":[{"operation":"pivot","options":{"index":["period_end_date"],"columns":[],"aggregates":{"Attendance
+  %":{"operator":"mean"}},"drop_missing_columns":false}},{"operation":"flatten"}]}],"form_data":{"datasource":"8__table","viz_type":"echarts_timeseries_line","slice_id":9,"x_axis":"period_end_date","time_grain_sqla":"P1M","x_axis_sort_asc":true,"metrics":[{"aggregate":null,"column":null,"datasourceWarning":false,"expressionType":"SQL","hasCustomLabel":true,"label":"Attendance
+  %","optionName":"metric_jax8z5eubx9_4o1ssudcuzv","sqlExpression":"100.0 * SUM(present_days)
+  / NULLIF(SUM(scheduled_days), 0)"}],"groupby":[],"adhoc_filters":[{"clause":"WHERE","comparator":"No
+  filter","expressionType":"SIMPLE","operator":"TEMPORAL_RANGE","subject":"period_end_date"}],"order_desc":true,"row_limit":10000,"truncate_metric":true,"show_empty_columns":true,"comparison_type":"values","annotation_layers":[],"forecastPeriods":10,"forecastInterval":0.8,"x_axis_title":"Month","x_axis_title_margin":30,"y_axis_title":"Attendance
+  Percentage (%)","y_axis_title_margin":30,"y_axis_title_position":"Left","sort_series_type":"sum","sort_series_ascending":true,"color_scheme":"supersetAndPresetColors","time_shift_color":true,"show_value":false,"only_total":true,"area":true,"opacity":0.6,"markerEnabled":true,"markerSize":6,"minorTicks":false,"show_legend":true,"legendType":"scroll","legendOrientation":"top","x_axis_time_format":"smart_date","xAxisLabelInterval":"auto","rich_tooltip":true,"showTooltipTotal":true,"showTooltipPercentage":true,"tooltipSortByMetric":false,"tooltipTimeFormat":"smart_date","y_axis_format":"SMART_NUMBER","logAxis":false,"minorSplitLine":false,"truncateXAxis":true,"truncateYAxis":true,"y_axis_bounds":[null,null],"extra_form_data":{},"dashboards":[2],"force":false,"result_format":"json","result_type":"full"},"result_format":"json","result_type":"full"}'
+cache_timeout: null
+uuid: a25b211f-410a-4b65-83f5-74b0dcf0864f
+version: 1.0.0
+dataset_uuid: 1898a854-f108-4c56-96e9-0615d32ead43
