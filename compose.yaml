@@ -16,7 +16,7 @@ services:
     environment:
       POSTGRES_DB: pulseiq
       POSTGRES_USER: pulseiq_user
-      POSTGRES_PASSWORD: pulseiq_dev_password
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?Set POSTGRES_PASSWORD in .env}
     ports:
       - "5432:5432"
     volumes:
@@ -33,7 +33,7 @@ services:
     ports:
       - "8088:8088"
     environment:
-      SUPERSET_SECRET_KEY: "pulseiq-local-dev-secret-change-before-production"
+     SUPERSET_SECRET_KEY: ${SUPERSET_SECRET_KEY:?Set SUPERSET_SECRET_KEY in .env}
     volumes:
       - superset_home:/app/superset_home
     depends_on:

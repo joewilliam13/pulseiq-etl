@@ -2,13 +2,14 @@ import pandas as pd
 import psycopg2
 from pathlib import Path
 from psycopg2.extras import execute_values
+import os
 
 DB_CONFIG = {
     "host": "localhost",
     "port": 5432,
     "dbname": "pulseiq",
     "user": "pulseiq_user",
-    "password": "pulseiq_dev_password",
+    "password": os.environ["POSTGRES_PASSWORD"],
 }
 
 BASE_DIR = Path(__file__).resolve().parent.parent
