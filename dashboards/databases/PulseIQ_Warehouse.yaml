@@ -1,0 +1,14 @@
+database_name: PulseIQ Warehouse
+sqlalchemy_uri: postgresql+psycopg2://pulseiq_user:XXXXXXXXXX@postgres:5432/pulseiq
+cache_timeout: null
+expose_in_sqllab: true
+allow_run_async: false
+allow_ctas: false
+allow_cvas: false
+allow_dml: false
+allow_file_upload: false
+extra:
+  allows_virtual_table_explore: true
+impersonate_user: false
+uuid: 9b425866-9c79-4b03-b703-9dc86afde744
+version: 1.0.0

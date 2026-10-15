@@ -1,0 +1,26 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+.venv/
+venv/
+env/
+
+.env
+.env.*
+!.env.example
+
+logs/
+*.log
+
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Raw and generated data
+Data/raw/
+Data/clean/
+rejected/
+
+# Local logs
+logs/

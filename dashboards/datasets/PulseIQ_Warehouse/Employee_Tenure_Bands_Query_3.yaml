@@ -1,0 +1,60 @@
+table_name: Employee Tenure Bands Query
+main_dttm_col: null
+description: null
+default_endpoint: null
+offset: 0
+cache_timeout: null
+catalog: pulseiq
+schema: dw
+sql: "SELECT\r\n    CASE\r\n        WHEN hire_date >= CURRENT_DATE - INTERVAL '1 year'\r\
+  \n            THEN 'Less than 1 Year'\r\n        WHEN hire_date >= CURRENT_DATE\
+  \ - INTERVAL '3 years'\r\n            THEN '1\u20133 Years'\r\n        WHEN hire_date\
+  \ >= CURRENT_DATE - INTERVAL '5 years'\r\n            THEN '3\u20135 Years'\r\n\
+  \        ELSE '5+ Years'\r\n    END AS tenure_band,\r\n    COUNT(*) AS employee_count\r\
+  \nFROM dw.dim_employee\r\nGROUP BY 1\r\nORDER BY 1;"
+params: null
+template_params: null
+filter_select_enabled: true
+fetch_values_predicate: null
+extra: null
+normalize_columns: false
+always_filter_main_dttm: false
+folders: null
+uuid: 010d7949-71f4-4d55-a3f2-17202a2bde34
+metrics:
+- metric_name: count
+  verbose_name: COUNT(*)
+  metric_type: count
+  expression: COUNT(*)
+  description: null
+  d3format: null
+  currency: null
+  extra: null
+  warning_text: null
+columns:
+- column_name: employee_count
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: LONGINTEGER
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: tenure_band
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: STRING
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+version: 1.0.0
+database_uuid: 9b425866-9c79-4b03-b703-9dc86afde744

@@ -1,0 +1,49 @@
+
+services:
+  etl:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: pulseiq-etl
+    working_dir: /app
+    volumes:
+      - .:/app
+    command: python src/run_etl.py
+
+  postgres:
+    image: postgres:16
+    container_name: pulseiq-postgres
+    environment:
+      POSTGRES_DB: pulseiq
+      POSTGRES_USER: pulseiq_user
+      POSTGRES_PASSWORD: pulseiq_dev_password
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U pulseiq_user -d pulseiq"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  superset:
+    image: apache/superset:6.0.0
+    container_name: pulseiq-superset
+    ports:
+      - "8088:8088"
+    environment:
+      SUPERSET_SECRET_KEY: "pulseiq-local-dev-secret-change-before-production"
+    volumes:
+      - superset_home:/app/superset_home
+    depends_on:
+      postgres:
+        condition: service_healthy
+    command: >
+      /bin/sh -c
+      "superset db upgrade &&
+      superset run -h 0.0.0.0 -p 8088"
+
+volumes:
+  postgres_data:
+  superset_home:
